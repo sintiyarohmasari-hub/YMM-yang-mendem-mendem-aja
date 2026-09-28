@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MANUK DI KUSUK MASUKK 💕</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    color: #5a3150;
+    overflow-x: hidden;
+}
+
+/* =====================
+   BACKGROUND
+===================== */
+
+#hearts,
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    animation: naik linear forwards;
+    font-size: 25px;
+    z-index: 999;
+}
+
+@keyframes naik {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.hero-box {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(15px);
+    padding: 45px 25px;
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(110, 40, 80, 0.2);
+    max-width: 850px;
+    animation: muncul 1.5s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hero h1 {
+    font-size: clamp(45px, 10vw, 90px);
+    color: #e83e7b;
+    font-family: Georgia, serif;
+    text-shadow: 3px 4px 10px rgba(200,50,100,.2);
+}
+
+.hero h2 {
+    font-size: clamp(35px, 8vw, 65px);
+    margin: 15px 0;
+    color: #9c3970;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.cake {
+    font-size: 80px;
+    animation: goyang 1.5s infinite;
+}
+
+@keyframes goyang {
+    0%,100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+/* =====================
+   BUTTON
+===================== */
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4f91, #ff79ad);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(220,50,110,.25);
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* =====================
+   SECTION
+===================== */
+
+section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    color: #d93672;
+    margin-bottom: 40px;
+    font-family: Georgia, serif;
+}
+
+/* =====================
+   CARD PESAN
+===================== */
+
+.card {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255,255,255,.85);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(100,30,70,.15);
+    line-height: 1.9;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.highlight {
+    color: #e43776;
+    font-weight: bold;
+    font-size: 20px !important;
+}
+
+/* =====================
+   FOTO
+===================== */
+
+.gallery {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(100,30,70,.2);
+    transition: .4s;
+}
+
+.photo:hover {
+    transform: rotate(-2deg) scale(1.04);
+}
+
+.photo img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.photo p {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* =====================
+   KATA MUTIARA
+===================== */
+
+.quote-box {
+    max-width: 750px;
+    min-height: 180px;
+    margin: auto;
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(100,30,70,.15);
+}
+
+#quote {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #b9366b;
+}
+
+/* =====================
+   RAHASIA
+===================== */
+
+.secret {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 30px;
+    text-align: center;
+    display: none;
+    animation: muncul .7s ease;
+}
+
+.secret.show {
+    display: block;
+}
+
+.secret h3 {
+    color: #e43776;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255,255,255,.4);
+}
+
+footer h2 {
+    color: #d93672;
+    margin-bottom: 15px;
+}
+
+footer p {
+    line-height: 1.8;
+}
+
+/* =====================
+   POPUP
+===================== */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(60,20,45,.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    background: white;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    animation: muncul .5s ease;
+}
+
+.popup-content h2 {
+    color: #e43776;
+    margin-bottom: 20px;
+}
+
+.popup-content p {
+    line-height: 1.8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:600px) {
+
+    .hero-box {
+        padding: 35px 18px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .photo img {
+        height: 230px;
+    }
+
+    #quote {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+<div id="confetti"></div>
+
+<!-- =====================
+     PEMBUKA
+===================== -->
+
+<section class="hero">
+
+    <div class="hero-box">
+
+        <div class="cake">🎂</div>
+
+        <h1>HBD ONTYY</h1>
+
+        <h2>Salma Fadilha 💕</h2>
+
+        <p>
+            Untuk sahabat terbaik, terjosjis, tersayang,
+            dan salah satu manusia paling berharga
+            yang pernah hadir dalam hidupku. 🥹💗
+        </p>
+
+        <div class="buttons">
+
+            <button onclick="scrollToId('pesan')">
+                💌 Buka Pesan
+            </button>
+
+            <button onclick="surprise()">
+                🎁 Kejutan!
+            </button>
+
+            <button onclick="banyakHati()">
+                💕 Banyak Hati
+            </button>
+
+            <button onclick="confetti()">
+                🎉 Rayakan!
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================
+     PESAN UNTUK SALMA
+===================== -->
+
+<section id="pesan">
+
+    <h2 class="section-title">
+        💌 Untuk Salma Fadilha
+    </h2>
+
+    <div class="card">
+
+        <p>
+            Hai Salmaaa! 🥹💗
+        </p>
+
+        <p>
+            Selamat ulang tahun untuk sahabat terbaik,
+            terjosjis, terlucu, terhebat, dan tentunya
+            salah satu orang yang paling berarti buat aku.
+        </p>
+
+        <p class="highlight">
+            Happy Birthday, Salma! 🎂🎉💗
+        </p>
+
+        <p>
+            Terima kasih sudah menjadi sahabat yang selalu
+            ada di banyak cerita. Terima kasih untuk semua
+            tawa, cerita random, curhat, kegilaan,
+            dan momen-momen yang mungkin kelihatannya sederhana,
+            tapi sebenarnya sangat berarti.
+        </p>
+
+        <p>
+            Aku berharap di usia kamu yang baru ini,
+            semua hal baik datang menghampirimu.
+            Semoga apa yang kamu impikan perlahan-lahan
+            menjadi kenyataan.
+        </p>
+
+        <p>
+            Semoga kamu selalu dikelilingi orang-orang
+            yang tulus menyayangimu, selalu diberikan
+            kesehatan, kebahagiaan, rezeki yang luas,
+            dan tentunya banyak alasan untuk tersenyum.
+        </p>
+
+        <p class="highlight">
+            Jangan pernah merasa sendirian,
+            karena kamu punya sahabat yang akan selalu
+            mendukungmu. ❤️
+        </p>
+
+        <p>
+            Kalau suatu hari kamu merasa dunia terlalu berat,
+            ingatlah bahwa kamu sudah melewati begitu banyak
+            hal sampai hari ini.
+        </p>
+
+        <p>
+            Kamu hebat, Salma.
+            Kamu berharga.
+            Kamu pantas mendapatkan hal-hal baik.
+        </p>
+
+        <p class="highlight">
+            Semoga persahabatan kita bukan cuma untuk hari ini,
+            tapi bisa terus sampai nanti kita sama-sama tua
+            dan masih bisa menertawakan cerita-cerita
+            masa muda kita. 😂❤️
+        </p>
+
+        <p>
+            Sekali lagi...
+        </p>
+
+        <p class="highlight">
+            HAPPY BIRTHDAY SALMA FADILHA! 🎂💐🎉
+        </p>
+
+        <p>
+            With lots of love,<br>
+            <b>✨ Sintiya ✨</b>
+        </p>
+
+        <div class="buttons">
+
+            <button onclick="banyakHati()">
+                ❤️ Aku Sayang Kamu
+            </button>
+
+            <button onclick="popup('doa')">
+                🙏 Doa Untuk Salma
+            </button>
+
+            <button onclick="popup('janji')">
+                🤝 Janji Persahabatan
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================
+     GALERI FOTO
+===================== -->
+
+<section>
+
+    <h2 class="section-title">
+        📸 Memories Bersama Salma
+    </h2>
+
+    <div class="gallery">
+
+        <div class="photo">
+
+            <img src="images/salma1.jpg" alt="Salma">
+
+            <p>
+                💗 Beautiful Memory
+            </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="images/salma2.jpg" alt="Salma">
+
+            <p>
+                🥰 Our Random Moment
+            </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="images/salma3.jpg" alt="Salma">
+
+            <p>
+                😂 Moment Gak Jelas
+            </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="images/salma4.jpg" alt="Salma">
+
+            <p>
+                ✨ Best Memory
+            </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="images/salma5.jpg" alt="Salma">
+
+            <p>
+                💕 Forever Memory
+            </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="images/salma6.jpg" alt="Salma">
+
+            <p>
+                🌷 One More Memory
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="banyakHati()">
+            💕 Tambah Hati
+        </button>
+
+        <button onclick="confetti()">
+            🎊 Confetti
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================
+     KATA MUTIARA
+===================== -->
+
+<section>
+
+    <h2 class="section-title">
+        🌷 Kata Mutiara Untukmu
+    </h2>
+
+    <div class="quote-box">
+
+        <p id="quote">
+            "Persahabatan yang tulus bukan tentang
+            selalu bersama, tetapi tentang selalu
+            ada meskipun jarak memisahkan."
+        </p>
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="nextQuote()">
+            ✨ Kata Mutiara Berikutnya
+        </button>
+
+        <button onclick="randomQuote()">
+            💫 Kata Random
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================
+     TOMBOL KEJUTAN
+===================== -->
+
+<section>
+
+    <h2 class="section-title">
+        🎁 Ada Sesuatu Untukmu...
+    </h2>
+
+    <div class="buttons">
+
+        <button onclick="popup('rahasia')">
+            🔐 Rahasia
+        </button>
+
+        <button onclick="popup('surat')">
+            💌 Surat Kecil
+        </button>
+
+        <button onclick="popup('harapan')">
+            🌟 Harapanku
+        </button>
+
+        <button onclick="popup('persahabatan')">
+            👭 Tentang Kita
+        </button>
+
+        <button onclick="banyakHati()">
+            💗 Spam Hati
+        </button>
+
+        <button onclick="confetti()">
+            🎉 PARTY!
+        </button>
+
+    </div>
+
+    <div id="secret" class="secret">
+
+        <h3>
+            🤫 Pesan Rahasia
+        </h3>
+
+        <p>
+            Salma, kalau kamu membaca pesan ini,
+            berarti kamu sudah sampai di bagian rahasia. 😆
+        </p>
+
+        <p>
+            Jadi sebenarnya ada satu hal yang ingin
+            Sintiya bilang...
+        </p>
+
+        <p class="highlight">
+            JANGAN PERNAH BERUBAH JADI ORANG YANG
+            BUKAN DIRIMU SENDIRI. ❤️
+        </p>
+
+        <p>
+            Karena Salma yang sekarang sudah cukup
+            spesial untuk orang-orang di sekitarnya. 🥹
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================
+     FOOTER
+===================== -->
+
+<footer>
+
+    <h2>
+        💕 From Sintiya
+    </h2>
+
+    <p>
+        Untuk sahabat terbaikku,
+        Salma Fadilha.
+    </p>
+
+    <p>
+        Semoga persahabatan kita selalu dipenuhi
+        tawa, cerita, dan kenangan indah. 🌷
+    </p>
+
+    <p style="margin-top:20px;">
+        <b>Happy Birthday, Salma! 🎂❤️</b>
+    </p>
+
+</footer>
+
+
+<!-- =====================
+     POPUP
+===================== -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <h2 id="popupTitle">
+            💕 Untuk Salma
+        </h2>
+
+        <p id="popupText">
+            Kamu adalah sahabat yang sangat berarti.
+        </p>
+
+        <br>
+
+        <button onclick="closePopup()">
+            ❤️ Tutup
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =====================
+   SCROLL
+===================== */
+
+function scrollToId(id) {
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =====================
+   HATI
+===================== */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const emojis = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘",
+        "💝",
+        "🌷",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 30) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    document.getElementById("hearts")
+        .appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+
+}
+
+
+setInterval(createHeart, 700);
+
+
+/* =====================
+   BANYAK HATI
+===================== */
+
+function banyakHati() {
+
+    for(let i = 0; i < 40; i++) {
+
+        setTimeout(() => {
+            createHeart();
+        }, i * 70);
+
+    }
+
+}
+
+
+/* =====================
+   CONFETTI
+===================== */
+
+function confetti() {
+
+    const emojis = [
+        "🎉",
+        "🎊",
+        "✨",
+        "💖",
+        "🌷",
+        "🎂",
+        "💕"
+    ];
+
+    for(let i = 0; i < 50; i++) {
+
+        const item =
+            document.createElement("div");
+
+        item.innerHTML =
+            emojis[Math.floor(
+                Math.random() * emojis.length
+            )];
+
+        item.style.position = "fixed";
+
+        item.style.left =
+            Math.random() * 100 + "vw";
+
+        item.style.top = "-30px";
+
+        item.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        item.style.zIndex = "2000";
+
+        item.style.transition =
+            "transform 3s linear, opacity 3s";
+
+        document.body.appendChild(item);
+
+        setTimeout(() => {
+
+            item.style.transform =
+                `translateY(${window.innerHeight + 100}px)
+                 rotate(${Math.random()*1000}deg)`;
+
+            item.style.opacity = "0";
+
+        }, 50);
+
+        setTimeout(() => {
+            item.remove();
+        }, 3500);
+
+    }
+
+}
+
+
+/* =====================
+   QUOTES
+===================== */
+
+const quotes = [
+
+    "Persahabatan yang tulus bukan tentang selalu bersama, tetapi tentang selalu ada meskipun jarak memisahkan. ❤️",
+
+    "Teman yang baik membuat hari biasa terasa seperti kenangan yang luar biasa. 🌷",
+
+    "Semoga kita tetap menjadi dua manusia random yang selalu punya cerita untuk ditertawakan. 😂",
+
+    "Tidak semua orang yang datang dalam hidup kita menjadi rumah. Tapi kamu adalah salah satu orang yang membuat perjalanan terasa lebih indah. 💕",
+
+    "Semoga setiap langkahmu dipenuhi kebahagiaan dan setiap impianmu menemukan jalannya. ✨",
+
+    "Sahabat sejati bukan yang tidak pernah berbeda pendapat, tetapi yang tetap memilih untuk saling memahami. ❤️",
+
+    "Kalau hidup adalah sebuah buku, aku bersyukur kamu menjadi salah satu bab paling indah di dalamnya. 📖💗",
+
+    "Semoga persahabatan kita bertahan lebih lama daripada semua foto dan chat yang pernah kita simpan. 🥹❤️"
+
+];
+
+let quoteIndex = 0;
+
+
+function nextQuote() {
+
+    quoteIndex++;
+
+    if(quoteIndex >= quotes.length) {
+        quoteIndex = 0;
+    }
+
+    document.getElementById("quote").innerText =
+        '"' + quotes[quoteIndex] + '"';
+
+}
+
+
+function randomQuote() {
+
+    const random =
+        Math.floor(Math.random() * quotes.length);
+
+    document.getElementById("quote").innerText =
+        '"' + quotes[random] + '"';
+
+}
+
+
+/* =====================
+   POPUP
+===================== */
+
+function popup(type) {
+
+    const title =
+        document.getElementById("popupTitle");
+
+    const text =
+        document.getElementById("popupText");
+
+    if(type === "doa") {
+
+        title.innerText =
+            "🙏 Doa Untuk Salma";
+
+        text.innerText =
+            "Semoga Salma selalu diberikan kesehatan, kebahagiaan, rezeki yang luas, dipertemukan dengan orang-orang baik, dan semua impian baiknya dimudahkan untuk menjadi kenyataan. Aamiin. 🤲❤️";
+
+    }
+
+    if(type === "janji") {
+
+        title.innerText =
+            "🤝 Janji Persahabatan";
+
+        text.innerText =
+            "Janji ya, jangan sampai kesibukan membuat kita lupa satu sama lain. Semoga kita tetap bisa saling cerita, saling mendukung, dan tetap menjadi sahabat meskipun kehidupan membawa kita ke jalan yang berbeda. ❤️";
+
+    }
+
+    if(type === "rahasia") {
+
+        title.innerText =
+            "🔐 Rahasia Kecil";
+
+        text.innerText =
+            "Sebenarnya Sintiya cuma mau bilang... SALMA ITU TERJOSJIS BANGET! 😭😂❤️ Jangan geer dulu ya!";
+
+    }
+
+    if(type === "surat") {
+
+        title.innerText =
+            "💌 Surat Kecil";
+
+        text.innerText =
+            "Dear Salma, terima kasih sudah menjadi bagian dari perjalanan hidup Sintiya. Semoga setiap tahun yang kamu lewati membawa lebih banyak kebahagiaan daripada kesedihan. Tetaplah menjadi Salma yang apa adanya. ❤️";
+
+    }
+
+    if(type === "harapan") {
+
+        title.innerText =
+            "🌟 Harapan Sintiya";
+
+        text.innerText =
+            "Aku berharap kamu bisa mendapatkan semua hal yang selama ini kamu doakan. Semoga kamu sukses, bahagia, sehat, dan selalu punya alasan untuk tersenyum. Dan semoga persahabatan kita tetap bertahan lama. 💕";
+
+    }
+
+    if(type === "persahabatan") {
+
+        title.innerText =
+            "👭 Tentang Kita";
+
+        text.innerText =
+            "Mungkin kita bukan sahabat yang selalu bersama setiap waktu. Tapi setiap cerita, tawa, dan kenangan yang kita punya akan selalu menjadi bagian kecil yang indah dalam hidup kita. 🥹❤️";
+
+    }
+
+    document.getElementById("popup")
+        .classList.add("show");
+
+    banyakHati();
+
+}
+
+
+function closePopup() {
+
+    document.getElementById("popup")
+        .classList.remove("show");
+
+}
+
+
+/* =====================
+   SURPRISE
+===================== */
+
+function surprise() {
+
+    const secret =
+        document.getElementById("secret");
+
+    secret.classList.add("show");
+
+    banyakHati();
+
+    confetti();
+
+    setTimeout(() => {
+
+        secret.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 200);
+
+}
+
+</script>
+
+</body>
+</html>
